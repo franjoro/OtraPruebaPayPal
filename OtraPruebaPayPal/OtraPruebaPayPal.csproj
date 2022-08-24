@@ -315,7 +315,7 @@
     <Content Include="PlanViaje.aspx" />
     <Content Include="RegisterEn.aspx" />
     <Content Include="San Miguel.aspx" />
-    <Content Include="San Salvador.aspx" />
+    <Content Include="detalleDepartamentos.aspx" />
     <Content Include="San Vicente.aspx" />
     <Content Include="Santa Ana.aspx" />
     <Content Include="script.js" />
@@ -786,12 +786,12 @@
     <Compile Include="San Miguel.aspx.designer.cs">
       <DependentUpon>San Miguel.aspx</DependentUpon>
     </Compile>
-    <Compile Include="San Salvador.aspx.cs">
-      <DependentUpon>San Salvador.aspx</DependentUpon>
+    <Compile Include="detalleDepartamentos.aspx.cs">
+      <DependentUpon>detalleDepartamentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="San Salvador.aspx.designer.cs">
-      <DependentUpon>San Salvador.aspx</DependentUpon>
+    <Compile Include="detalleDepartamentos.aspx.designer.cs">
+      <DependentUpon>detalleDepartamentos.aspx</DependentUpon>
     </Compile>
     <Compile Include="San Vicente.aspx.cs">
       <DependentUpon>San Vicente.aspx</DependentUpon>

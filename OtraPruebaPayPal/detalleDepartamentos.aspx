@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="San Salvador.aspx.cs" Inherits="OtraPruebaPayPal.San_Salvador" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="detalleDepartamentos.aspx.cs" Inherits="OtraPruebaPayPal.San_Salvador" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
-        <title>San Salvador</title>
+        <title> <asp:Literal runat="server" id="nameDpt" EnableViewState="false" /></title>
     <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -30,7 +30,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
         <form id="form1" runat="server">
-            <a class="navbar-brand" href="Mapa.aspx">San Salvador</a>
+            <a class="navbar-brand" href="Mapa.aspx"> <asp:Literal runat="server" id="nameDpt1" EnableViewState="false" /> </a>
                 <%--<asp:Button ID="btningresar" class="btn btn-outline-success my-2 my-sm-0" type="submit" runat="server" Text="Agregar" OnClick="btningresar_Click" />
                 <asp:Button ID="btneliminar" class="btn btn-outline-success my-2 my-sm-0" type="submit" runat="server" Text="Eliminar" OnClick="btneliminar_Click" />
                 <asp:Button ID="btneditar" class="btn btn-outline-success my-2 my-sm-0" type="submit" runat="server" Text="Editar" OnClick="btneditar_Click" />--%>
@@ -46,12 +46,12 @@
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-6" src="assets/LogoTurismore2.png" alt="..." />
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">San Salvador</h1>
+                <h1 class="masthead-heading text-uppercase mb-0"><asp:Literal runat="server" id="nameDpt2" EnableViewState="false" /> </h1>
         </header>
         <section class="page-section bg-primary text-white mb-0" id="about" style="background-color:#2c3e50!important">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">Historia de San Salvador</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-white">Historia de <asp:Literal runat="server" id="nameDpt3" EnableViewState="false" /> </h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -60,17 +60,9 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto">
-                        <p class="lead">A inicios del siglo XX, la capital, como el país en general, se desarrolló en función de los ingresos generados por la exportación del café. Como expresión de esa prosperidad fueron iniciadas diversas estructuras reconocidas en la urbe, tales como el Parque Dueñas, después conocido como Plaza Libertad (1900); el Teatro Nacional de San Salvador; la ex Casa Presidencial (1911) y el Hospital Rosales (inaugurado en 1902).
-                        <br />
-                        Todas construidas en aras de hacer la localidad más cosmopolita. Sin embargo, nuevamente los desastres naturales destrozaron muchos edificios de esos años con los terremotos de 1917 y 1919; y una inundación en 1922. Por ser la sede del gobierno, en San Salvador ocurrieron importantes acontecimientos políticos a lo largo del siglo. Justo en los primeros años acaeció el magnicidio de Manuel Enrique Araujo el 4 de febrero de 1913 en la Plaza Barrios.</p>
-                    </div>
-                    <div class="col-lg-4 me-auto">
-                        <p class="lead">Años más tarde arribaría al poder Maximiliano Hernández Martínez a través de un golpe de estado en 1931, en medio de la crisis económica que resultó en la caída de los precios del café durante los años de la Gran Depresión. A partir de entonces iniciaría una época de agitación política con el predominio del estamento militar. En la década de los años 1970, José Napoleón Duarte, ingeniero, fue elegido alcalde; He servido desde 1964 hasta 1970. 
-                        <br />
-                        Las décadas de 1960 a 1980 fueron la edad de oro de San Salvador en todos los aspectos de seguridad, calidad de vida y modernización.
-                        con el aumento de la violencia política, San Salvador fue el escenario de numerosas protestas populares de diversas organizaciones opositoras al régimen; la mayor de ellas, registrada en la historia del país, ocurrió el 22 de enero de 1980.</p>
-                    </div>
+                    <div class="col-lg-12 ms-auto">
+ <asp:Literal runat="server" id="descripcion" EnableViewState="false" /> 
+                        </div>
                 </div>
             </div>
         </section>

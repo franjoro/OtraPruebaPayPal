@@ -1165,11 +1165,11 @@ namespace OtraPruebaPayPal
         }
 
         //**************************** Método para obtener las imágenes ****************************
-        public static string[] ObtenerImagenesSanSalvador()
+        public static string[] ObtenerImagenesCarrousel(string idDept)
         {
             MySqlConnection conn = datos.ObtenerConexion();
             MySqlDataAdapter DA = new MySqlDataAdapter();
-            DA.SelectCommand = new MySqlCommand(string.Format("SELECT * from imagenes_carrusel_sansalvador;"), conn);
+            DA.SelectCommand = new MySqlCommand(string.Format("SELECT * from imagenes_carrusel WHERE id_departamento = {0} ", idDept), conn);
             DataTable table = new DataTable();
 
             DA.Fill(table);
@@ -1178,12 +1178,14 @@ namespace OtraPruebaPayPal
 
             string indicators = "";
             int contador = 0;
+            int flag = 0;
             foreach (DataRow row in table.Rows)
             {
 
-                if (row["ID"].ToString() == "1")
+                if (flag == 0 )
                 {
                     imagenes = imagenes + "<div class='carousel-item active'><img src='images/" + row["Direccion"] + "' width='1100' height='500'/><div class='carousel-caption d-none d-md-block'> <h5>" + row["Texto"] + "</h5></div></div>";
+                    flag = 1; 
                 }
                 else
                 {
@@ -1205,9 +1207,29 @@ namespace OtraPruebaPayPal
             retorno[0] = imagenes;
             retorno[1] = indicators;
 
+            System.Diagnostics.Debug.WriteLine(imagenes);
             return retorno;
 
         }
+
+        //**************************** Método para obtener el texto de los departamentos ****************************
+        public static string[] obtenerTextoDepartamentos(string idDept)
+        {
+            MySqlConnection conn = datos.ObtenerConexion();
+            MySqlCommand comando = new MySqlCommand(String.Format("SELECT * FROM departamentos_de_el_salvador WHERE id = {0}", idDept), conn);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            string[] retorno = new string[2];
+            while (reader.Read())
+            {
+                retorno[0] = reader.GetString(1); // nombre
+                retorno[1] = reader.GetString(2); // descripcion
+            }
+
+            return retorno;
+        }
+
+
 
         //**************************** Método para obtener un registro ****************************
         public static string[] SeleccionarRegistroImagenSanSalvador(int id)

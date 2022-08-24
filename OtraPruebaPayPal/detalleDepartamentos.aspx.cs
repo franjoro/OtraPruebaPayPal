@@ -20,12 +20,20 @@ namespace OtraPruebaPayPal
             //{
             //    Response.Redirect("AgregarImagen.aspx");
             //}
-            cargarCarrusel();
+            string idDept = Request.QueryString["dpt"];
+
+
+            string[] dataDpt = conexiones.obtenerTextoDepartamentos(idDept);
+            cargarCarrusel(idDept);
+            nameDpt.Text = dataDpt[0];
+            nameDpt2.Text = dataDpt[0];
+            nameDpt3.Text = dataDpt[0];
+            descripcion.Text = dataDpt[1];
         }
 
-        protected void cargarCarrusel()
+        protected void cargarCarrusel(string idDept)
         {
-            string[] datos = conexiones.ObtenerImagenesSanSalvador();
+            string[] datos = conexiones.ObtenerImagenesCarrousel(idDept);
             IndicatorsLiteral.Text = datos[1];
             ImagesLiteral.Text = datos[0];
         }

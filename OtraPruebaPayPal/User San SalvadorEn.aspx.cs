@@ -25,9 +25,9 @@ namespace OtraPruebaPayPal
 
         protected void cargarCarrusel()
         {
-            string[] datos = conexiones.ObtenerImagenesSanSalvador();
-            IndicatorsLiteral.Text = datos[1];
-            ImagesLiteral.Text = datos[0];
+            //string[] datos = conexiones.ObtenerImagenesSanSalvador();
+            //IndicatorsLiteral.Text = datos[1];
+            //ImagesLiteral.Text = datos[0];
         }
     }
 }
