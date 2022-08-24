@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtraPruebaPayPal", "OtraPruebaPayPal\OtraPruebaPayPal.csproj", "{BFD6B75A-CCAD-497F-9719-459E18A3FA0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFD6B75A-CCAD-497F-9719-459E18A3FA0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD6B75A-CCAD-497F-9719-459E18A3FA0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD6B75A-CCAD-497F-9719-459E18A3FA0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD6B75A-CCAD-497F-9719-459E18A3FA0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D62547B-5BC4-4B34-BE57-CD0D560B253A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,94 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Balsamic Sans';
+}
+
+header {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+}
+
+section {
+    border: 2px solid #5624d0;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    padding: 7px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px dashed #ccc;
+    margin-bottom: 3px;
+}
+
+    label:hover {
+        background: #7454c2;
+    }
+
+button {
+    text-align: center;
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    background-color: #76d7c8;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+    button:hover {
+        background: #000;
+        color: #fff;
+    }
+
+h2 {
+    text-align: center;
+}
+
+#resultado {
+    font-size: 30px;
+    color: #000;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+.imagen {
+    float: left;
+    margin-left: auto;
+    width: 100px;
+}
+
+.left {
+    background-color: #8069b7;
+    float: left;
+    height: 1470px;
+    width: 300px;
+}
+
+.exit {
+    position: relative;
+    bottom: 0px;
+    top: 710px;
+}
