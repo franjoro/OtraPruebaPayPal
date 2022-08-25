@@ -1756,7 +1756,7 @@ namespace OtraPruebaPayPal
         {
             MySqlConnection conn = datos.ObtenerConexion();
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO imagenes_carrusel (Direccion, Texto, Departamento) VALUES ('{0}', '{1}', '{2}');", foto, texto, departamento), conn);
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO imagenes_carrusel (Direccion, Texto, id_departamento) VALUES ('{0}', '{1}', '{2}');", foto, texto, departamento), conn);
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
@@ -1825,11 +1825,11 @@ namespace OtraPruebaPayPal
         }
 
         //**************************** Método para obtener todos los registros de imágenes ****************************
-        public static DataTable ListarImagenes()
+        public static DataTable ListarImagenes(string idDept)
         {
             MySqlConnection conn = datos.ObtenerConexion(); //Abrimos la conexion creada.
             MySqlDataAdapter DA = new MySqlDataAdapter();
-            DA.SelectCommand = new MySqlCommand(string.Format("SELECT * FROM imagenes_carrusel"), conn);
+            DA.SelectCommand = new MySqlCommand(string.Format("SELECT imagenes_carrusel.Id AS id, Direccion, Texto, nombre_departamento  FROM imagenes_carrusel INNER JOIN departamentos_de_el_salvador ON imagenes_carrusel.id_departamento = departamentos_de_el_salvador.id WHERE departamentos_de_el_salvador.id = {0} " , idDept), conn);
             DataTable table = new DataTable();
             DA.Fill(table);
 
@@ -1843,14 +1843,23 @@ namespace OtraPruebaPayPal
         //**************************** Método para obtener actualizar un registro de imagen ****************************
         public static int ActualizarImagen(int id, string texto, string foto, string departamento)
         {
+            System.Diagnostics.Debug.WriteLine("id" + id);
+            System.Diagnostics.Debug.WriteLine("texto" + texto);
+            System.Diagnostics.Debug.WriteLine("foto" + foto);
+            System.Diagnostics.Debug.WriteLine("departamento" + departamento);
+
             MySqlConnection conn = datos.ObtenerConexion();
             int retorno = 0;
             MySqlCommand comando;
 
             if (foto != String.Empty)
-                comando = new MySqlCommand(string.Format("UPDATE imagenes_carrusel SET Texto = '{0}', Direccion = '{1}', Departamento = '{2}' WHERE Id = {3}", texto, foto, departamento, id), conn);
+                comando = new MySqlCommand(string.Format("UPDATE imagenes_carrusel SET Texto = '{0}', Direccion = '{1}', id_departamento = '{2}' WHERE Id = {3}", texto, foto, departamento, id), conn);
             else
-                comando = new MySqlCommand(string.Format("UPDATE imagenes_carrusel SET Texto = '{0}', Departamento = '{1}' WHERE Id = {2}", texto, departamento, id), conn);
+                comando = new MySqlCommand(string.Format("UPDATE imagenes_carrusel SET Texto = '{0}', id_departamento = '{1}' WHERE Id = {2}", texto, departamento, id), conn);
+
+
+            System.Diagnostics.Debug.WriteLine(string.Format("UPDATE imagenes_carrusel SET Texto = '{0}', Direccion = '{1}', id_departamento = '{2}' WHERE Id = {3}", texto, foto, departamento, id));
+            System.Diagnostics.Debug.WriteLine(string.Format("UPDATE imagenes_carrusel SET Texto = '{0}', id_departamento = '{1}' WHERE Id = {2}", texto, departamento, id));
 
             retorno = comando.ExecuteNonQuery();
 
@@ -1861,7 +1870,9 @@ namespace OtraPruebaPayPal
         public static int EliminarRegistro(int id)
         {
             MySqlConnection conn = datos.ObtenerConexion(); //Abrimos la conexion creada.
-            MySqlCommand comando = new MySqlCommand(String.Format("DELETE FROM imagenes_carrusel WHERE Id = {0}", id), conn);
+
+            System.Diagnostics.Debug.WriteLine(String.Format("DELETE FROM imagenes_carrusel WHERE Id  = {0}", id));
+            MySqlCommand comando = new MySqlCommand(String.Format("DELETE FROM imagenes_carrusel WHERE Id  = {0}", id), conn);
             int retorno = comando.ExecuteNonQuery();
 
             return retorno;
@@ -1872,7 +1883,7 @@ namespace OtraPruebaPayPal
         {
             int valor = 0;
             MySqlConnection conexion = datos.ObtenerConexion();
-            MySqlCommand cmd = new MySqlCommand("SELECT id FROM imagenes_carrusel WHERE Direccion= '" + foto + "' AND Texto = '" + texto + "' And Departamento = '" + departamento + "' ", conexion);
+            MySqlCommand cmd = new MySqlCommand("SELECT id FROM imagenes_carrusel WHERE Direccion= '" + foto + "' AND Texto = '" + texto + "' And id_departamento = '" + departamento + "' ", conexion);
             valor = Convert.ToInt32(cmd.ExecuteScalar());
             if (valor != 0)
             {

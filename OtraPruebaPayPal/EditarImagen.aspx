@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditarImagen.aspx.cs" Inherits="OtraPruebaPayPal.EditarImagen" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditarImagen.aspx.cs" Inherits="OtraPruebaPayPal.EditarImagen" EnableEventValidation="false"  %>
 
 <!DOCTYPE html>
 
@@ -42,7 +42,7 @@
                         <div class="myform-bottom">
                             
                                 <div class="form-group">
-                                    <asp:TextBox ID="IdImagen" runat="server" placeholder="ID imagen" type="text" class="form-control" onpaste="return false" onkeypress="return NumCheck(event, this)"></asp:TextBox>
+                                    <asp:TextBox ID="IdImagen" runat="server" placeholder="ID imagen" type="text" class="form-control" onpaste="return false" ></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <asp:TextBox ID="Texto" runat="server" placeholder="Texto" type="text" class="form-control" onpaste="return false" onkeypress="return validar(event)" minlength="1" ></asp:TextBox>
@@ -55,62 +55,69 @@
                                     <asp:Label ID="LabelDepartamento" runat="server" CssClass="form-label" Text="Departments"></asp:Label>
                                     <asp:DropDownList ID="DDLDepartamento" CssClass="form-control" runat="server" OnTextChanged="DDLDepartamento_TextChanged">
                                         <asp:ListItem></asp:ListItem>
-                                        <asp:ListItem Value="Ahuachapán">Ahuachapán</asp:ListItem>
-                                        <asp:ListItem Value="Cabañas">Cabañas</asp:ListItem>
-                                        <asp:ListItem Value="LaLibertad">La Libertad</asp:ListItem>
-                                        <asp:ListItem Value="Morazán">Morazán</asp:ListItem>
-                                        <asp:ListItem Value="LaPaz">La Paz</asp:ListItem>
-                                        <asp:ListItem Value="SantaAna">Santa Ana</asp:ListItem>
-                                        <asp:ListItem Value="SanMiguel">San Miguel</asp:ListItem>
-                                        <asp:ListItem Value="SanSalvador">San Salvador</asp:ListItem>
-                                        <asp:ListItem Value="SanVicente">San Vicente</asp:ListItem>
-                                        <asp:ListItem Value="Sonsonate">Sonsonate</asp:ListItem>
-                                        <asp:ListItem Value="LaUnión">La Unión</asp:ListItem>
-                                        <asp:ListItem Value="Usulután">Usulután</asp:ListItem>
+                                        <asp:ListItem Value="1">Ahuachapán</asp:ListItem>
+                                        <asp:ListItem Value="2">Cabañas</asp:ListItem>
+                                        <asp:ListItem Value="5">La Libertad</asp:ListItem>
+                                        <asp:ListItem Value="6">Morazán</asp:ListItem>
+                                        <asp:ListItem Value="7">La Paz</asp:ListItem>
+                                        <asp:ListItem Value="8">Santa Ana</asp:ListItem>
+                                        <asp:ListItem Value="9">San Miguel</asp:ListItem>
+                                        <asp:ListItem Value="10">San Salvador</asp:ListItem>
+                                        <asp:ListItem Value="11">San Vicente</asp:ListItem>
+                                        <asp:ListItem Value="12">Sonsonate</asp:ListItem>
+                                        <asp:ListItem Value="13">La Unión</asp:ListItem>
+                                        <asp:ListItem Value="14">Usulután</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
-                                                               
-                                <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar" CssClass="mybtn" Width="30%" OnClick="btnSeleccionar_Click"></asp:Button>
+
                                 <asp:Button ID="btnEditar" runat="server" Text="Editar" CssClass="mybtn" Width="30%" OnClick="btnEditar_Click"></asp:Button>
                                 <asp:Button ID="btnEliminar" runat="server" CssClass="mybtn" Width="30%" Text="Eliminar" OnClick="btnEliminar_Click" />
-                                <asp:Literal ID="alerta" runat="server" Text=""></asp:Literal>
-                            
+                            <asp:Literal ID="alerta" runat="server" Text=""></asp:Literal>
+
                         </div>
                     </div>
                 </div>
             </div>
-         </div>
+        </div>
         <div class="mb-4">
             <div class="center">
-                 <asp:GridView ID="ListaImagenes" AutoGenerateColumns="False" runat="server" class="display" CssClass="table table-dark table-striped table-bordered">
-                     <Columns>
-                         <asp:TemplateField HeaderText="Id">
+                <asp:GridView ID="ListaImagenes" AutoGenerateColumns="False" runat="server" CssClass="table bg-dark table-bordered grid" RowHeaderColumn="Texto" ShowHeaderWhenEmpty="True" OnRowCommand="ListaImagenes_OnRowCommand" >
+                    <Columns>
+                        <asp:BoundField DataField="Texto" HeaderText="Text" />
+                        <asp:TemplateField HeaderText="Image">
                             <ItemTemplate>
-                               <%# Eval ("Id") %>
+                                <asp:Literal ID="Literal1" runat="server" Text='<%# Eval ("Direccion") %>'></asp:Literal>
                             </ItemTemplate>
                         </asp:TemplateField>
-                         <asp:TemplateField HeaderText="Text">
+                        <asp:BoundField DataField="nombre_departamento" HeaderText="Department" />
+                        <asp:TemplateField ShowHeader="False">
                             <ItemTemplate>
-                               <%# Eval ("Texto") %>
+                                <asp:Button ID="Button1" CssClass="btn btn-warning" runat="server" CommandName="cargarDatos"
+                                    Text="Editar imagen" CommandArgument='<%# Eval("id") %>' />
                             </ItemTemplate>
                         </asp:TemplateField>
-                          <asp:TemplateField HeaderText="Image">
-                            <ItemTemplate>
-                                <asp:Literal id="Literal1" runat="server" text='<%# Eval ("Direccion") %>'></asp:Literal>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                         <asp:TemplateField HeaderText="Departments">
-                             <ItemTemplate>
-                                 <%# Eval ("Departamento") %>
-                             </ItemTemplate>
-                         </asp:TemplateField>
-                     </Columns>
-                 
-                     <EditRowStyle ForeColor="White" />
+                    </Columns>
+                  
                  
                  </asp:GridView>
             </div>
         </div>
     </form>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    $(function () {
+        $(".grid").DataTable(
+        {
+            bLengthChange: true,
+            lengthMenu: [[5, 10, -1], [5, 10, "All"]],
+            bFilter: true,
+            bSort: true,
+            bPaginate: true
+        });
+    });
+</script>
+
 </body>
 </html>

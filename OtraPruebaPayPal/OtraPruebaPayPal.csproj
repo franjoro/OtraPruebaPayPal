@@ -78,23 +78,7 @@
   <ItemGroup>
     <Content Include="Administradores.aspx" />
     <Content Include="AgregarImagen.aspx" />
-    <Content Include="AgregarImagenAhuachapán.aspx" />
-    <Content Include="AgregarImagenCabañas.aspx" />
-    <Content Include="AgregarImagenChalatenango.aspx" />
-    <Content Include="AgregarImagenCuscatlán.aspx" />
-    <Content Include="AgregarImagenLaLibertad.aspx" />
-    <Content Include="AgregarImagenLaPaz.aspx" />
-    <Content Include="AgregarImagenLaUnión.aspx" />
-    <Content Include="AgregarImagenMorazán.aspx" />
-    <Content Include="EditarImagenPaginacion.aspx" />
-    <Content Include="AgregarImagenSanMiguel.aspx" />
-    <Content Include="AgregarImagenSanSalvador.aspx" />
-    <Content Include="AgregarImagenSantaAna.aspx" />
-    <Content Include="AgregarImagenSanVicente.aspx" />
-    <Content Include="AgregarImagenSonsonate.aspx" />
-    <Content Include="AgregarImagenUsulután.aspx" />
     <Content Include="AgregarUsuarios.aspx" />
-    <Content Include="Ahuachapán.aspx" />
     <Content Include="assets\Ahuachapán\Atzumpa.jpg" />
     <Content Include="assets\Ahuachapán\Bosque Imposible.jpg" />
     <Content Include="assets\Ahuachapán\Buena Vista.jpg" />
@@ -174,8 +158,6 @@
     <Content Include="assets\Usulután\El cuco.jpg" />
     <Content Include="assets\Usulután\El Espino.jpg" />
     <Content Include="assets\Usulután\Puerto Parada.jpg" />
-    <Content Include="Cabañas.aspx" />
-    <Content Include="Chalatenango.aspx" />
     <Content Include="CompletePurchase.aspx" />
     <Content Include="css\bootstrap-grid.css" />
     <Content Include="css\bootstrap-grid.min.css" />
@@ -203,20 +185,6 @@
     <Content Include="js\jquery-3.6.0.min.js" />
     <Content Include="js\jquery.dataTables.min.js" />
     <Content Include="PayPal.aspx" />
-    <Content Include="EditarImagenAhuachapán.aspx" />
-    <Content Include="EditarImagenCabañas.aspx" />
-    <Content Include="EditarImagenChalatenango.aspx" />
-    <Content Include="EditarImagenCuscatlán.aspx" />
-    <Content Include="EditarImagenLaLibertad.aspx" />
-    <Content Include="EditarImagenLaPaz.aspx" />
-    <Content Include="EditarImagenLaUnión.aspx" />
-    <Content Include="EditarImagenMorazán.aspx" />
-    <Content Include="EditarImagenSanMiguel.aspx" />
-    <Content Include="EditarImagenSanSalvador.aspx" />
-    <Content Include="EditarImagenSantaAna.aspx" />
-    <Content Include="EditarImagenSanVicente.aspx" />
-    <Content Include="EditarImagenSonsonate.aspx" />
-    <Content Include="EditarImagenUsulután.aspx" />
     <Content Include="EstilosCss\EstiloInicio.css" />
     <Content Include="EstilosCss\EstilosStorage.css" />
     <Content Include="EstilosCss\Login.css" />
@@ -306,23 +274,15 @@
     <Content Include="js\main.js" />
     <Content Include="js\main2.js" />
     <Content Include="js\script.js" />
-    <Content Include="La Libertad.aspx" />
-    <Content Include="La Paz.aspx" />
-    <Content Include="La Unión.aspx" />
     <Content Include="LoginEn.aspx" />
     <Content Include="Mapa.aspx" />
-    <Content Include="Morazán.aspx" />
     <Content Include="PlanViaje.aspx" />
     <Content Include="RegisterEn.aspx" />
-    <Content Include="San Miguel.aspx" />
     <Content Include="detalleDepartamentos.aspx" />
-    <Content Include="San Vicente.aspx" />
-    <Content Include="Santa Ana.aspx" />
     <Content Include="script.js" />
     <Content Include="seleccion.js" />
     <Content Include="SeleccionDepartamento.aspx" />
     <Content Include="SeleccionDepartamentoEn.aspx" />
-    <Content Include="Sonsonate.aspx" />
     <Content Include="styles\Ahuachapán.css" />
     <Content Include="styles\css.css" />
     <Content Include="styles\estilos.css" />
@@ -374,7 +334,6 @@
     <Content Include="User Santa AnaEn.aspx" />
     <Content Include="User SonsonateEn.aspx" />
     <Content Include="User UsulutánEn.aspx" />
-    <Content Include="Usulután.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -394,138 +353,12 @@
     <Compile Include="AgregarImagen.aspx.designer.cs">
       <DependentUpon>AgregarImagen.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AgregarImagenAhuachapán.aspx.cs">
-      <DependentUpon>AgregarImagenAhuachapán.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenAhuachapán.aspx.designer.cs">
-      <DependentUpon>AgregarImagenAhuachapán.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenCabañas.aspx.cs">
-      <DependentUpon>AgregarImagenCabañas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenCabañas.aspx.designer.cs">
-      <DependentUpon>AgregarImagenCabañas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenChalatenango.aspx.cs">
-      <DependentUpon>AgregarImagenChalatenango.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenChalatenango.aspx.designer.cs">
-      <DependentUpon>AgregarImagenChalatenango.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenCuscatlán.aspx.cs">
-      <DependentUpon>AgregarImagenCuscatlán.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenCuscatlán.aspx.designer.cs">
-      <DependentUpon>AgregarImagenCuscatlán.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenLaLibertad.aspx.cs">
-      <DependentUpon>AgregarImagenLaLibertad.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenLaLibertad.aspx.designer.cs">
-      <DependentUpon>AgregarImagenLaLibertad.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenLaPaz.aspx.cs">
-      <DependentUpon>AgregarImagenLaPaz.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenLaPaz.aspx.designer.cs">
-      <DependentUpon>AgregarImagenLaPaz.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenLaUnión.aspx.cs">
-      <DependentUpon>AgregarImagenLaUnión.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenLaUnión.aspx.designer.cs">
-      <DependentUpon>AgregarImagenLaUnión.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenMorazán.aspx.cs">
-      <DependentUpon>AgregarImagenMorazán.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenMorazán.aspx.designer.cs">
-      <DependentUpon>AgregarImagenMorazán.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenPaginacion.aspx.cs">
-      <DependentUpon>EditarImagenPaginacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenPaginacion.aspx.designer.cs">
-      <DependentUpon>EditarImagenPaginacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenSanMiguel.aspx.cs">
-      <DependentUpon>AgregarImagenSanMiguel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenSanMiguel.aspx.designer.cs">
-      <DependentUpon>AgregarImagenSanMiguel.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenSanSalvador.aspx.cs">
-      <DependentUpon>AgregarImagenSanSalvador.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenSanSalvador.aspx.designer.cs">
-      <DependentUpon>AgregarImagenSanSalvador.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenSantaAna.aspx.cs">
-      <DependentUpon>AgregarImagenSantaAna.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenSantaAna.aspx.designer.cs">
-      <DependentUpon>AgregarImagenSantaAna.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenSanVicente.aspx.cs">
-      <DependentUpon>AgregarImagenSanVicente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenSanVicente.aspx.designer.cs">
-      <DependentUpon>AgregarImagenSanVicente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenSonsonate.aspx.cs">
-      <DependentUpon>AgregarImagenSonsonate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenSonsonate.aspx.designer.cs">
-      <DependentUpon>AgregarImagenSonsonate.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarImagenUsulután.aspx.cs">
-      <DependentUpon>AgregarImagenUsulután.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarImagenUsulután.aspx.designer.cs">
-      <DependentUpon>AgregarImagenUsulután.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AgregarUsuarios.aspx.cs">
       <DependentUpon>AgregarUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AgregarUsuarios.aspx.designer.cs">
       <DependentUpon>AgregarUsuarios.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Ahuachapán.aspx.cs">
-      <DependentUpon>Ahuachapán.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Ahuachapán.aspx.designer.cs">
-      <DependentUpon>Ahuachapán.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Cabañas.aspx.cs">
-      <DependentUpon>Cabañas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cabañas.aspx.designer.cs">
-      <DependentUpon>Cabañas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Chalatenango.aspx.cs">
-      <DependentUpon>Chalatenango.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Chalatenango.aspx.designer.cs">
-      <DependentUpon>Chalatenango.aspx</DependentUpon>
     </Compile>
     <Compile Include="CompletePurchase.aspx.cs">
       <DependentUpon>CompletePurchase.aspx</DependentUpon>
@@ -579,104 +412,6 @@
     <Compile Include="PayPal.aspx.designer.cs">
       <DependentUpon>PayPal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditarImagenAhuachapán.aspx.cs">
-      <DependentUpon>EditarImagenAhuachapán.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenAhuachapán.aspx.designer.cs">
-      <DependentUpon>EditarImagenAhuachapán.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenCabañas.aspx.cs">
-      <DependentUpon>EditarImagenCabañas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenCabañas.aspx.designer.cs">
-      <DependentUpon>EditarImagenCabañas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenChalatenango.aspx.cs">
-      <DependentUpon>EditarImagenChalatenango.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenChalatenango.aspx.designer.cs">
-      <DependentUpon>EditarImagenChalatenango.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenCuscatlán.aspx.cs">
-      <DependentUpon>EditarImagenCuscatlán.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenCuscatlán.aspx.designer.cs">
-      <DependentUpon>EditarImagenCuscatlán.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenLaLibertad.aspx.cs">
-      <DependentUpon>EditarImagenLaLibertad.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenLaLibertad.aspx.designer.cs">
-      <DependentUpon>EditarImagenLaLibertad.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenLaPaz.aspx.cs">
-      <DependentUpon>EditarImagenLaPaz.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenLaPaz.aspx.designer.cs">
-      <DependentUpon>EditarImagenLaPaz.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenLaUnión.aspx.cs">
-      <DependentUpon>EditarImagenLaUnión.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenLaUnión.aspx.designer.cs">
-      <DependentUpon>EditarImagenLaUnión.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenMorazán.aspx.cs">
-      <DependentUpon>EditarImagenMorazán.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenMorazán.aspx.designer.cs">
-      <DependentUpon>EditarImagenMorazán.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenSanMiguel.aspx.cs">
-      <DependentUpon>EditarImagenSanMiguel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenSanMiguel.aspx.designer.cs">
-      <DependentUpon>EditarImagenSanMiguel.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenSanSalvador.aspx.cs">
-      <DependentUpon>EditarImagenSanSalvador.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenSanSalvador.aspx.designer.cs">
-      <DependentUpon>EditarImagenSanSalvador.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenSantaAna.aspx.cs">
-      <DependentUpon>EditarImagenSantaAna.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenSantaAna.aspx.designer.cs">
-      <DependentUpon>EditarImagenSantaAna.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenSanVicente.aspx.cs">
-      <DependentUpon>EditarImagenSanVicente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenSanVicente.aspx.designer.cs">
-      <DependentUpon>EditarImagenSanVicente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenSonsonate.aspx.cs">
-      <DependentUpon>EditarImagenSonsonate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenSonsonate.aspx.designer.cs">
-      <DependentUpon>EditarImagenSonsonate.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarImagenUsulután.aspx.cs">
-      <DependentUpon>EditarImagenUsulután.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarImagenUsulután.aspx.designer.cs">
-      <DependentUpon>EditarImagenUsulután.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ForgotPsswrd.aspx.cs">
       <DependentUpon>ForgotPsswrd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -700,27 +435,6 @@
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="La Libertad.aspx.cs">
-      <DependentUpon>La Libertad.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="La Libertad.aspx.designer.cs">
-      <DependentUpon>La Libertad.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="La Paz.aspx.cs">
-      <DependentUpon>La Paz.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="La Paz.aspx.designer.cs">
-      <DependentUpon>La Paz.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="La Unión.aspx.cs">
-      <DependentUpon>La Unión.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="La Unión.aspx.designer.cs">
-      <DependentUpon>La Unión.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -750,13 +464,6 @@
     <Compile Include="Mapa.aspx.designer.cs">
       <DependentUpon>Mapa.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Morazán.aspx.cs">
-      <DependentUpon>Morazán.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Morazán.aspx.designer.cs">
-      <DependentUpon>Morazán.aspx</DependentUpon>
-    </Compile>
     <Compile Include="PlanViaje.aspx.cs">
       <DependentUpon>PlanViaje.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -779,33 +486,12 @@
     <Compile Include="RegisterEn.aspx.designer.cs">
       <DependentUpon>RegisterEn.aspx</DependentUpon>
     </Compile>
-    <Compile Include="San Miguel.aspx.cs">
-      <DependentUpon>San Miguel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="San Miguel.aspx.designer.cs">
-      <DependentUpon>San Miguel.aspx</DependentUpon>
-    </Compile>
     <Compile Include="detalleDepartamentos.aspx.cs">
       <DependentUpon>detalleDepartamentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="detalleDepartamentos.aspx.designer.cs">
       <DependentUpon>detalleDepartamentos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="San Vicente.aspx.cs">
-      <DependentUpon>San Vicente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="San Vicente.aspx.designer.cs">
-      <DependentUpon>San Vicente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Santa Ana.aspx.cs">
-      <DependentUpon>Santa Ana.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Santa Ana.aspx.designer.cs">
-      <DependentUpon>Santa Ana.aspx</DependentUpon>
     </Compile>
     <Compile Include="SeleccionDepartamento.aspx.cs">
       <DependentUpon>SeleccionDepartamento.aspx</DependentUpon>
@@ -820,13 +506,6 @@
     </Compile>
     <Compile Include="SeleccionDepartamentoEn.aspx.designer.cs">
       <DependentUpon>SeleccionDepartamentoEn.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Sonsonate.aspx.cs">
-      <DependentUpon>Sonsonate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Sonsonate.aspx.designer.cs">
-      <DependentUpon>Sonsonate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tarjeta.aspx.cs">
       <DependentUpon>Tarjeta.aspx</DependentUpon>
@@ -1122,13 +801,6 @@
     </Compile>
     <Compile Include="User UsulutánEn.aspx.designer.cs">
       <DependentUpon>User UsulutánEn.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Usulután.aspx.cs">
-      <DependentUpon>Usulután.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usulután.aspx.designer.cs">
-      <DependentUpon>Usulután.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

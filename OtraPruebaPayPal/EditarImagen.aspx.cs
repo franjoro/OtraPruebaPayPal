@@ -11,27 +11,47 @@ namespace OtraPruebaPayPal
 {
     public partial class EditarImagen : System.Web.UI.Page
     {
+        int idImagenAtt;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargar_datos();
+            string idDept = Request.QueryString["dpt"];
+            cargar_datos(idDept);
+            
         }
+
+        protected void ListaImagenes_OnRowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName != "cargarDatos") return;
+            int id = Convert.ToInt32(e.CommandArgument);
+            this.idImagenAtt = id;
+            //System.Diagnostics.Debug.WriteLine("Aqui en boton seleccionar el id es  " + this.idImagenAtt);
+            cargar_registro(id);
+
+        }
+
 
         protected void btnInicio_Click(object sender, EventArgs e) 
         {
-            Response.Redirect("Ahuachapán.aspx");
+            string idDept = Request.QueryString["dpt"];
+            Response.Redirect("detalleDepartamentos.aspx?dpt="+idDept);
         }
 
-        protected void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(IdImagen.Text);
-            cargar_registro(id);
-        }
+ 
 
-        protected void cargar_datos()
+        protected void cargar_datos(string idDept)
         {
-            DataTable myTable = conexiones.ListarImagenes();
-            ListaImagenes.DataSource = myTable;
-            ListaImagenes.DataBind();
+            if (!IsPostBack)
+            {
+             DataTable myTable = conexiones.ListarImagenes(idDept);
+                ListaImagenes.DataSource = myTable;
+                ListaImagenes.DataBind();
+                ListaImagenes.UseAccessibleHeader = true;
+                ListaImagenes.HeaderRow.TableSection = TableRowSection.TableHeader;
+            }
+            ListaImagenes.UseAccessibleHeader = true;
+            ListaImagenes.HeaderRow.TableSection = TableRowSection.TableHeader;
+
         }
 
         protected void cargar_registro(int id)
@@ -44,6 +64,7 @@ namespace OtraPruebaPayPal
                     ImagePreview.ImageUrl = "/images/" + respuesta[0];
                     Texto.Text = respuesta[1];
                     DDLDepartamento.Text = respuesta[2];
+                    IdImagen.Text = id.ToString();
                 }
                 else
                 {
@@ -61,10 +82,10 @@ namespace OtraPruebaPayPal
             string strFileName;
             string strFilePath;
             string strFolder;
-
+            string idDept = Request.QueryString["dpt"];
             strFolder = Server.MapPath("./images/");
-
-            int id = Convert.ToInt32(IdImagen.Text);
+            int id;
+            var isNumber = int.TryParse(IdImagen.Text.Trim(), out id);
             string texto = Texto.Text.Trim();
             string departamento = DDLDepartamento.Text.Trim();
 
@@ -88,6 +109,7 @@ namespace OtraPruebaPayPal
                 {
                     PhotoFile.PostedFile.SaveAs(strFilePath);
                 }
+                
 
 
 
@@ -96,12 +118,12 @@ namespace OtraPruebaPayPal
                 if (guardado == 1)
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "myalert", "Swal.fire('Su Imagen se actualizó con éxito.', '', 'success');", true);
-                    cargar_datos();
+                    Response.Redirect("EditarImagen.aspx?dpt=" + idDept);
                     cargar_registro(id);
                 }
                 else
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "Swal.fire('Hubo un error al actualizar la imagen', '', 'error');", true);
+                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "Swal.fire('Hubo un error al actualizar la imagen1', '', 'error');", true);
                 }
             }
             else //En caso de que no se actualice la foto que posee el registro
@@ -112,12 +134,12 @@ namespace OtraPruebaPayPal
                 if (guardado == 1)
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "myalert", "Swal.fire('Su Imagen se actualizó con éxito.', '', 'success');", true);
-                    cargar_datos();
+                    Response.Redirect("EditarImagen.aspx?dpt=" + idDept);
                     cargar_registro(id);
                 }
                 else
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "Swal.fire('Hubo un error al actualizar la imagen', '', 'error');", true);
+                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "Swal.fire('Hubo un error al actualizar la imagen2', '', 'error');", true);
                 }
             }
 
@@ -125,6 +147,7 @@ namespace OtraPruebaPayPal
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
+            string idDept = Request.QueryString["dpt"];
             int id;
             var isNumber = int.TryParse(IdImagen.Text.Trim(), out id);
             if (isNumber)
@@ -133,10 +156,7 @@ namespace OtraPruebaPayPal
                 if (eliminado == 1)
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "myalert", "Swal.fire('El registro se eliminó con éxito.', '', 'success');", true);
-                    cargar_datos();
-                    Texto.Text = String.Empty;
-                    IdImagen.Text = String.Empty;
-                    ImagePreview.ImageUrl = null;
+                    Response.Redirect("EditarImagen.aspx?dpt=" + idDept);
                 }
             }
             else

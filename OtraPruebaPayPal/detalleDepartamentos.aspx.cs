@@ -40,12 +40,13 @@ namespace OtraPruebaPayPal
 
         protected void btnAgregarImagen_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AgregarImagenSanSalvador.aspx");
+            Response.Redirect("AgregarImagen.aspx");
         }
 
         protected void btnEditarImagen_Click(object sender, EventArgs e)
         {
-            Response.Redirect("EditarImagenSanSalvador.aspx");
+            string idDept = Request.QueryString["dpt"];
+            Response.Redirect("EditarImagen.aspx?dpt="+idDept);
         }
     }
 }

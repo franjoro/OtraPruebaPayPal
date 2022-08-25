@@ -46,18 +46,18 @@
                                     <asp:Label ID="LabelDepartamento" runat="server" CssClass="form-label" Text="Departments"></asp:Label>
                                     <asp:DropDownList ID="DDLDepartamento" CssClass="form-control" runat="server">
                                         <asp:ListItem></asp:ListItem>
-                                        <asp:ListItem Value="Ahuachapán">Ahuachapán</asp:ListItem>
-                                        <asp:ListItem Value="Cabañas">Cabañas</asp:ListItem>
-                                        <asp:ListItem Value="LaLibertad">La Libertad</asp:ListItem>
-                                        <asp:ListItem Value="Morazán">Morazán</asp:ListItem>
-                                        <asp:ListItem Value="LaPaz">La Paz</asp:ListItem>
-                                        <asp:ListItem Value="SantaAna">Santa Ana</asp:ListItem>
-                                        <asp:ListItem Value="SanMiguel">San Miguel</asp:ListItem>
-                                        <asp:ListItem Value="SanSalvador">San Salvador</asp:ListItem>
-                                        <asp:ListItem Value="SanVicente">San Vicente</asp:ListItem>
-                                        <asp:ListItem Value="Sonsonate">Sonsonate</asp:ListItem>
-                                        <asp:ListItem Value="LaUnión">La Unión</asp:ListItem>
-                                        <asp:ListItem Value="Usulután">Usulután</asp:ListItem>
+                                        <asp:ListItem Value="1">Ahuachapán</asp:ListItem>
+                                        <asp:ListItem Value="2">Cabañas</asp:ListItem>
+                                        <asp:ListItem Value="5">La Libertad</asp:ListItem>
+                                        <asp:ListItem Value="6">Morazán</asp:ListItem>
+                                        <asp:ListItem Value="7">La Paz</asp:ListItem>
+                                        <asp:ListItem Value="8">Santa Ana</asp:ListItem>
+                                        <asp:ListItem Value="9">San Miguel</asp:ListItem>
+                                        <asp:ListItem Value="10">San Salvador</asp:ListItem>
+                                        <asp:ListItem Value="11">San Vicente</asp:ListItem>
+                                        <asp:ListItem Value="12">Sonsonate</asp:ListItem>
+                                        <asp:ListItem Value="13">La Unión</asp:ListItem>
+                                        <asp:ListItem Value="14">Usulután</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
                                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="mybtn" OnClick="btnAgregar_Click"></asp:Button>
